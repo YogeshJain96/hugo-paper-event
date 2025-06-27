@@ -1,0 +1,3 @@
+[submodule "themes/PaperEvent"]
+	path = themes/PaperEvent
+	url = https://github.com/yogeshjain96/hugo-paper-event.git

@@ -7,8 +7,7 @@ on:
       - "LICENSE"
       - "README.md"
     branches:
-      - main
-      - exampleSite
+      - example-site
   workflow_dispatch:
     # manual run
     inputs:
@@ -38,7 +37,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: ${{ github.event.inputs.hugoVersion || '0.146.0' }}
+      HUGO_VERSION: ${{ github.event.inputs.hugoVersion || '0.147.2' }}
     steps:
       - name: Install Hugo CLI
         run: |
@@ -47,14 +46,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: exampleSite
+          ref: example-site
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
       - name: Get Theme
         run: git submodule update --init --recursive
-      - name: Update theme to Latest commit
-        run: git submodule update --remote --merge
       - name: Build with Hugo
         run: |
           hugo \
