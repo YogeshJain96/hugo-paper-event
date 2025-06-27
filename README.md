@@ -1,6 +1,11 @@
-## PaperEvent
+<h1 align=center>Hugo PaperEvent | <a href="https://curiousone.in/hugo-paper-event/" target="_blank" rel="nofollow">Demo</a></h1>
+
+<h4 align=center>Designed for events and conferences</h4>
+<br>
 
 **`PaperEvent`** is a [Hugo](https://gohugo.io/) theme based on theme [hugo-PaperMod](https://github.com/adityatelange/hugo-PaperMod).
+
+**Demo Example Site** can be found here: [**example-site**](https://github.com/yogeshjain96/hugo-paper-event/tree/example-site). Demo is built up with [example-site](https://github.com/yogeshjain96/hugo-paper-event/tree/example-site) as source.
 
 ---
 ### Custom changes with PaperEvent 🚀
