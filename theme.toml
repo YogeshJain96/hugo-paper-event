@@ -1,13 +1,17 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "PaperMod"
+name = "PaperEvent"
 license = "MIT"
-licenselink = "https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE"
-description = "A fast, clean, responsive Hugo theme"
-homepage = "https://adityatelange.github.io/hugo-PaperMod/"
-demosite = "https://adityatelange.github.io/hugo-PaperMod/"
+licenselink = "https://github.com/yogeshjain96/hugo-paper-event/blob/main/LICENSE"
+description = "A fast, clean, responsive, feature-rich Hugo theme for designed for events and conference"
+homepage = "https://curiousone.in/hugo-paper-event/"
+demosite = "https://curiousone.in/hugo-paper-event/"
 tags = [
+  "events",
+  "conferenece",
+  "talks",
+  "paper",
   "responsive",
   "simple",
   "clean",
@@ -36,17 +40,18 @@ features = [
   "theme-toggle",
   "menu-location-indicator",
   "scroll-to-top",
-  "search"
+  "search",
+  "enhanced-user-experience"
 ]
 min_version = "0.146.0"
 
 [author]
-  name = "Aditya Telange"
-  homepage = "https://github.com/adityatelange/"
+  name = "Yogesh Jain"
+  homepage = "https://github.com/yogeshjain96/"
 
 # If porting an existing theme
 [original]
-  name = "Paper"
-  author = "nanxiaobei"
-  homepage = "https://github.com/nanxiaobei"
-  repo = "https://github.com/nanxiaobei/hugo-paper/"
+  name = "PaperMod"
+  author = "adityatelange"
+  homepage = "https://github.com/adityatelange/"
+  repo = "https://github.com/adityatelange/hugo-PaperMod"

@@ -1,4 +1,4 @@
-name: Deploy Hugo PaperMod Demo to Pages
+name: Deploy Hugo PaperEvent Demo to Pages
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - "LICENSE"
       - "README.md"
     branches:
-      - master
+      - main
       - exampleSite
   workflow_dispatch:
     # manual run
@@ -15,7 +15,7 @@ on:
       hugoVersion:
         description: "Hugo Version"
         required: false
-        default: "0.146.0"
+        default: "0.147.2"
 
 # Allow one concurrent deployment
 concurrency:
