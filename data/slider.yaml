@@ -1,0 +1,14 @@
+title: "XYZ Meetups"
+images:
+  - src: images/home-slides/slide-1.jpg
+    caption: "slide-1 caption here"
+  - src: images/home-slides/slide-2.jpg
+    caption: "slide-2 caption here"
+  - src: images/home-slides/slide-3.jpg
+    caption: "slide-3 caption here"
+  - src: images/home-slides/slide-4.jpg
+    caption: "slide-4 caption here"
+  - src: images/home-slides/slide-5.jpg
+    caption: "slide-5 caption here"
+  - src: images/home-slides/slide-6.jpg
+    caption: "slide-6 caption here"

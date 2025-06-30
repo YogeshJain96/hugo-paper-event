@@ -1,0 +1,39 @@
+- time: "03:30 PM - 03:45 PM"
+  events:
+    - |
+      ### Registration at XYZ Corp
+
+- time: "03:45 PM - 04:00 PM"
+  events:
+    - |
+      ### Welcome & Word from XYZ Sponsor
+
+- time: "04:00 PM - 04:35 PM"
+  events:
+    - |
+      ### Session 1: Topic XYZ
+      **`Speaker:`** [Speaker-1](/speakers/speaker-full-name-1), [Speaker-2](/speakers/speaker-full-name-2)
+
+      Some brief description of the session goes here. Session detail link here: [Talk-1 ABC](talk/talk-abc)
+
+- time: "04:40 PM - 05:15 PM"
+  events:
+    - |
+      ### Session 2: Topic XYZ
+      **`Speakers:`** [Speaker-3](/speakers/speaker-full-name-3), [Speaker-4](/speakers/speaker-full-name-4)
+      
+      Some brief description of the session goes here. Session detail link here: [Talk-2 xyz](talk/talk-xyz)
+
+- time: "05:20 PM - 05:55 PM"
+  events:
+    - |
+      ### Session 3: Topic XYZ
+      **`Speakers:`** [Speaker-5](/speakers/speaker-full-name-5)
+
+      Some brief description of the session goes here. Session detail link here: [Talk-1 ABC](talk/talk-abc)
+
+- time: "06:00 PM - 07:00 PM"
+  events:
+    - |
+      ### Networking + Dinner
+      `Networking` `Dinner`

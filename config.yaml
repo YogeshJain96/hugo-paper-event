@@ -2,7 +2,7 @@
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "https://yogeshjain96.github.io/hugo-paper-event/"
 title: PaperEvent
-copyright: "© [PaperEvent Contributors](https://github.com/yogeshjain96/hugo-paper-event/graphs/contributors)"
+copyright: "© [PaperEvent](https://github.com/yogeshjain96/hugo-paper-event/graphs/contributors)"
 theme: ["PaperEvent"]
 
 enableInlineShortcodes: true
@@ -26,43 +26,56 @@ languages:
   en:
     languageName: "English"
     weight: 1
-    taxonomies:
-      category: categories
-      tag: tags
-      series: series
     menu:
       main:
-        - name: Archive
-          url: archives
-          weight: 5
-        - name: Search
-          url: search/
-          weight: 10
-        - name: Tags
-          url: tags/
-          weight: 10
-
-  
-    # custom params for each language should be under [langcode].parms - hugo v0.120.0
+        - name: "\U0001F50D"
+          url: search
+          weight: 1
+        - identifier: meetups
+          name: Meetups
+          url: /meetups/
+          weight: 20
+        - identifier: register
+          name: Register
+          url: /register/
+          weight: 80
+        - identifier: call-for-papers
+          name: CFP
+          url: /call-for-papers/
+          weight: 90
+        - identifier: schedule
+          name: Schedule
+          url: /schedule/
+          weight: 95
+        - identifier: members
+          name: About
+          url: /about/
+          weight: 100
+        - identifier: speakers
+          name: Speakers
+          url: /speakers/
+          weight: 99
     params:
       profileMode:
         enabled: true
         title: PaperEvent
         imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
         imageTitle: ProfileMode image
-        # imageWidth: 120
-        # imageHeight: 120
-        subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
-        buttons:
-          - name: Blog
-            url: posts
-          - name: Getting Started
-            url: https://github.com/YogeshJain96/hugo-paper-event/tree/main?tab=readme-ov-file#getting-started-
+        imageWidth: 120
+        imageHeight: 120
+        subtitle: |
+          **PaperEvent** - Event and Conference Hugo Theme
 
-  params:
-      homeInfoParams:
-        Title: "Hi there \U0001F44B"
-        Content: Welcome to RTL layout
+          This theme is designed to be used for events, conferences, meetups, & more.
+          This is a sample event site.
+          Feel free to use this **opensource theme** to get started with your event site.
+      buttons:
+      - name: Submit paper
+        url: call-for-papers
+      - name: Register
+        url: register
+      - name: Schedule
+        url: schedule
 
 outputs:
   home:
@@ -73,23 +86,17 @@ outputs:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: "Theme PaperEvent - https://github.com/YogeshJain96/hugo-paper-event"
-  author: Theme PaperEvent
-  # author: ["Me", "You"] # multiple authors
-
   defaultTheme: auto
   # disableThemeToggle: true
   ShowShareButtons: true
-  ShowReadingTime: true
+  ShowReadingTime: false
   # disableSpecial1stPost: true
-  displayFullLangName: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
-  ShowAllPagesInArchive: true
   ShowPageNums: true
-  ShowToc: true
-  # comments: false
+  ShowToc: false
   images: ["images/paper-event-cover.png"]
 
   profileMode:
@@ -97,41 +104,28 @@ params:
     title: PaperEvent
     imageUrl: "#"
     imageTitle: my image
-    # imageWidth: 120
-    # imageHeight: 120
+    imageWidth: 120
+    imageHeight: 120
     buttons:
-      - name: Archives
-        url: archives
-      - name: Tags
-        url: tags
-
-  homeInfoParams:
-    Title: "PaperEvent's Demo"
-    Content: >
-      👋 Welcome to demo page of Hugo's theme PaperEvent!
-
-      - **PaperEvent**  is designed to be clean and simple event and conference but fast and responsive theme with useful feature-set that enhances UX.
-
-      - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
-
-      - PaperEvent is based on theme [PaperMod](https://github.com/adityatelange/hugo-PaperMod).
-
+      - name: Submit paper
+        url: call-for-papers
+      - name: Register
+        url: register
+      - name: Schedule
+        url: schedule
   socialIcons:
+    - name: linkedin
+      title: LinkedIn Group
+      url: "#"
+    - name: youtube
+      title: YouTube Channel
+      url: "#"
+    - name: email
+      title: Email Us
+      url: "mailto:xyz@gmail.com"
     - name: github
       title: View Source on Github
-      url: "https://github.com/YogeshJain96/hugo-paper-event"
-
-  editPost:
-    URL: "https://github.com/YogeshJain96/hugo-paper-event/tree/example-site/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
-
-  # label:
-  # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
-  # text: "Home"
-  # icon: icon.png
-  # iconHeight: 35
-
+      url: "https://github.com/YogeshJain96/hugo-paper-event/tree/example-site"
   # analytics:
   #     google:
   #         SiteVerificationTag: "XYZabc"

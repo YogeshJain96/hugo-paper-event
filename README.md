@@ -10,47 +10,44 @@ Read Wiki => [hugo-paper-event - Installation](https://github.com/YogeshJain96/h
 
 ```
 .(site root)
-├── config.yml
+├── config.yaml
+├──  themes
+│   └── PaperEvent
+├── data
+│   ├── info.yaml
+│   ├── schedule.yaml
+│   └── slider.yaml
 ├── content
-│   ├── archives.fr.md
-│   ├── archives.md
-│   ├── posts
-│   │   ├── emoji-support.md
-│   │   ├── markdown-syntax.fa.md
-│   │   ├── markdown-syntax.fr.md
-│   │   ├── markdown-syntax.md
-│   │   ├── math-typesetting.md
-│   │   ├── papermod
-│   │   │   ├── _index.md
-│   │   │   ├── papermod-faq.md
-│   │   │   ├── papermod-features
-│   │   │   │   ├── images
-│   │   │   │   │   ├── homeinfo.jpg
-│   │   │   │   │   ├── profile.jpg
-│   │   │   │   │   └── regular.jpg
-│   │   │   │   └── index.md
-│   │   │   ├── papermod-icons.md
-│   │   │   ├── papermod-installation.md
-│   │   │   └── papermod-variables.md
-│   │   ├── placeholder-text.md
-│   │   └── rich-content.md
-│   ├── search.fr.md
+│   ├── about.md
+│   ├── call-for-papers.md
+│   ├── meetups
+│   │   ├── 1.md
+│   │   └── 2.md
+│   ├── register.md
+│   ├── schedule.md
 │   ├── search.md
-│   └── tags
-├── LICENSE
-├── README.md
-├── resources
-│   └── _gen
-│       ├── assets
-│       └── images
+│   ├── speakers
+│   │   ├── speaker-full-name-1.md
+│   │   ├── speaker-full-name-2.md
+│   │   ├── speaker-full-name-3.md
+│   │   ├── speaker-full-name-4.md
+│   │   └── speaker-full-name-5.md
+│   └── talk
+│       ├── talk-abc.md
+│       └── talk-xyz.md
 ├── static
-│   ├── android-chrome-192x192.png
-│   ├── android-chrome-512x512.png
-│   ├── apple-touch-icon.png
-│   ├── favicon-16x16.png
-│   ├── favicon-32x32.png
-│   ├── favicon.ico
-│   └── papermod-cover.png
-└── themes
-    └── hugo-PaperMod
+│   └── images
+│       └── home-slides
+│           ├── slide-1.jpg
+│           ├── slide-2.jpg
+│           ├── slide-3.jpg
+│           ├── slide-4.jpg
+│           ├── slide-5.jpg
+│           └── slide-6.jpg
+├── assets
+│   ├── css
+│   │   └── extended
+│   │       └── custom.css
+│   └── images
+└── README.md
 ```
