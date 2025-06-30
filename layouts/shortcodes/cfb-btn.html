@@ -1,0 +1,12 @@
+{{- $info := site.Data.info }}
+<h2>
+    {{- if $info.cfpLink }}
+        <a class="button" href="{{ $info.cfpLink }}" rel="noopener" title="Submit Paper" target="_blank">
+    {{ else }}
+        <a class="button" href="#" onclick="alert('{{ $info.cfpAlertText }}'); return false;">
+    {{- end }}
+    <span class="button-inner">
+        Submit Paper
+    </span>
+    </a>
+</h2>

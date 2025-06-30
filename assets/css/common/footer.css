@@ -5,10 +5,9 @@
 }
 
 .footer {
-    max-width: calc(var(--main-width) + var(--gap) * 2);
+    position: relative;
     margin: auto;
     padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
-    text-align: center;
     line-height: 24px;
 }
 
@@ -23,12 +22,17 @@
 
 .footer a {
     color: inherit;
-    border-bottom: 1px solid var(--secondary);
 }
 
-.footer a:hover {
-    border-bottom: 1px solid var(--primary);
-}
+.footer-right {
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+    svg {
+      width: 20px !important;
+      height: 20px !important;
+    }
+  }
 
 .top-link {
     visibility: hidden;

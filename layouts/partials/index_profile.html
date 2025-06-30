@@ -1,3 +1,4 @@
+{{- $info := site.Data.info }}
 <div class="profile">
     {{- with site.Params.profileMode }}
     <div class="profile_inner">
@@ -23,15 +24,25 @@
                     {{- $img = $img.Resize "150x150" }}
                 {{- end }}
             {{- end }}
-            <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+            <img draggable="false" class="toggleDarkMode" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
                 height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
         {{- else }}
-        <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+        <img draggable="false" class="toggleDarkMode" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
             height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
         {{- end }}
         {{- end }}
-        <h1>{{ .title | default site.Title | markdownify }}</h1>
-        <span>{{ .subtitle | markdownify }}</span>
+        <h2>{{ $info.eventTitle }}</h2>
+        {{- if $info.eventDate -}}
+            <h3><mark>{{ $info.eventDate | markdownify}}</mark></h3>
+        {{- end }}
+        {{- if $info.venue -}}
+            <div class="venue">
+                <b>Venue:</b> <u>{{ $info.venue | markdownify  }}</u>
+            </div>
+        {{- end }}
+        <div class="subtitle">
+            {{ .subtitle | markdownify }}
+        </div>
         {{- partial "social_icons.html" -}}
 
         {{- with .buttons }}
@@ -52,6 +63,36 @@
             </a>
             {{- end }}
         </div>
+        {{- end }}
+        {{- if $info.countdown -}}
+            <h3>Countdown to Meetup</h3>
+            <div id="flipdown" class="flipdown"></div>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipdown/dist/flipdown.min.css"/>
+            <script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.js"></script>
+            <script>
+                let d = "{{ $info.countdown }}";
+                const countdownTarget = new Date(d).getTime()/1000;
+                const flipdownContainer = document.querySelector("#flipdown");
+                if (document.body.className.includes("dark")) {
+                    new window.FlipDown(countdownTarget, {theme: "light"})
+                    .start()
+                    .ifEnded(() => {
+                        document.querySelector("#flipdown").innerHTML = "<h2>🎉 The event has started!</h2>";
+                    });
+                } else {
+                    new window.FlipDown(countdownTarget, {theme: "dark"})
+                    .start()
+                    .ifEnded(() => {
+                        document.querySelector("#flipdown").innerHTML = "<h2>🎉 The event has started!</h2>";
+                    });
+                }
+            </script>
+        {{- end }}
+        {{ partial "slider.html" site.Data.slider }}
+        {{- if $info.venueIframe -}}
+            <div class="flexible-div">
+                {{ $info.venueIframe  | markdownify }}
+            </div>
         {{- end }}
     </div>
     {{- end}}

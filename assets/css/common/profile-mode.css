@@ -1,6 +1,5 @@
 .buttons,
 .main .profile {
-    display: flex;
     justify-content: center;
 }
 
@@ -17,17 +16,14 @@
     gap: 10px;
 }
 
-.profile img {
-    border-radius: 50%;
-}
-
 .buttons {
     flex-wrap: wrap;
     max-width: 400px;
 }
 
 .button {
-    background: var(--tertiary);
+    background: #336791;
+    color: #FFFFFF;
     border-radius: var(--radius);
     margin: 8px;
     padding: 6px;
@@ -40,4 +36,19 @@
 
 .button:active {
     transform: scale(0.96);
+}
+
+.subtitle {
+    margin: 8px 0;
+    color: var(--secondary);
+    font-size: 16px;
+    font-family: monospace;
+    line-height: 1.6;
+}
+
+.flexible-div{
+    @media (max-width: 768px) {
+        display: flex;
+        width: 400px;
+    }
 }

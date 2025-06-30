@@ -1,6 +1,6 @@
 <h1 align=center>Hugo PaperEvent | <a href="https://curiousone.in/hugo-paper-event/" target="_blank" rel="nofollow">Demo</a></h1>
 
-<h4 align=center>Designed for events and conferences</h4>
+<h4 align=center>Designed for events, conferences & Meetups</h4>
 <br>
 
 **`PaperEvent`** is a [Hugo](https://gohugo.io/) theme based on theme [hugo-PaperMod](https://github.com/adityatelange/hugo-PaperMod).
@@ -8,9 +8,32 @@
 **Demo Example Site** can be found here: [**example-site**](https://github.com/yogeshjain96/hugo-paper-event/tree/example-site). Demo is built up with [example-site](https://github.com/yogeshjain96/hugo-paper-event/tree/example-site) as source.
 
 ---
+
 ### Custom changes with PaperEvent 🚀
 
-> [TODO]
+- To add new meetups
+
+    Run: `hugo new --kind meetups meetups/3.md`
+    or manually add new files in content/meetups dir
+
+- To add new speakers
+
+    Run: `hugo new --kind speakers speakers/speaker-name.md`
+    or manually add new files in content/speakers dir
+
+- To add new Talk or session details
+   Run: `hugo new --kind speakers talk/talk-2.md`
+    or manually add new files in content/talk dir
+
+- To update the Dates, Meetup titles, countdown, venues, links edit [data/info.yaml](https://github.com/YogeshJain96/hugo-paper-event/blob/example-site/data/info.yaml) file in data dir
+- To update the SLIDES images, refer example site [data/slider.yaml](https://github.com/YogeshJain96/hugo-paper-event/blob/example-site/data/slider.yaml) file in data dir
+- To update the SCHEDULE, refer example site [data/schedule.yaml](https://github.com/YogeshJain96/hugo-paper-event/blob/example-site/data/schedule.yaml) file in data dir
+- To update HOME page content, refer example site [config.yaml](https://github.com/YogeshJain96/hugo-paper-event/blob/example-site/config.yaml) file
+- To update ABOUT page, refer example site [about.md](https://github.com/YogeshJain96/hugo-paper-event/blob/example-site/content/about.md) file in content dir
+- To update CFP page, refer example site [call-for-papers.md](https://github.com/YogeshJain96/hugo-paper-event/blob/example-site/content/call-for-papers.md) file in content dir
+- To update REGISTER page, refer example site [register.md](https://github.com/YogeshJain96/hugo-paper-event/blob/example-site/content/register.md) file in content dir
+
+Refer to https://github.com/YogeshJain96/hugo-paper-event/tree/example-site for more details
 
 ---
 

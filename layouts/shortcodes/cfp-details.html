@@ -1,0 +1,34 @@
+{{- $info := site.Data.info }}
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><strong>Submission open date:</strong></td>
+    <td>{{ $info.cfpStartDate | markdownify}}</td>
+  </tr>
+  <tr>
+    <td><strong>Last Date for submission:</strong></td>
+    <td>{{ $info.cfpCloseDate | markdownify}}</td>
+  </tr>
+  <tr>
+    <td><strong>Notification of Acceptance:</strong></td>
+    <td>{{ $info.cfpNotificationDate | markdownify}}</td>
+  </tr>
+  <tr>
+    <td><strong>Event Date:</strong></td>
+    <td>{{ $info.eventDate | markdownify}}</td>
+  </tr>
+  <tr>
+    <td><strong>Event Timings:</strong></td>
+    <td>{{ $info.eventTimings | markdownify}}</td>
+  </tr>
+  <tr>
+    <td><strong>Event Venue:</strong></td>
+    <td>
+      {{ $info.venue | markdownify}}
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,29 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+    <div class="post-description"> For {{ site.Data.info.eventTitle }}</div>
+  </header>
+  <div class="post-content">
+    {{- if .Content }} {{- if not (.Param "disableAnchoredHeadings") }} {{-
+    partial "anchored_headings.html" .Content -}} {{- else }}{{ .Content }}{{
+    end }} {{- end }}
+    <div class="schedule">
+      {{- range $index, $element := site.Data.schedule }}
+      {{ $autoAlign:= cond (eq (mod $index 2) 0) "right" "left" }}
+      <div class="schedule-text-wrapper schedule-{{ $autoAlign }}">
+        <h3>{{ $element.time }}</h3>
+        {{- range $element.events }}
+        <div class="schedule-content">
+          <p>
+            {{ . | markdownify }}
+          </p>
+        </div>
+        {{- end }}
+      </div>
+    {{- end }}
+  </div>
+</article>
+{{- end }}{{/* end main */}}

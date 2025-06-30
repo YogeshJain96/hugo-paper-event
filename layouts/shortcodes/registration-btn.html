@@ -1,0 +1,12 @@
+{{- $info := site.Data.info }}
+<h2>
+    {{- if $info.registrationLink }}
+        <a class="button" href="{{ $info.registrationLink }}" rel="noopener" title="RSVP" target="_blank">
+    {{ else }}
+        <a class="button" href="#" onclick="alert('{{ $info.registrationAlertText }}'); return false;">
+    {{- end }}
+    <span class="button-inner">
+        RSVP
+    </span>
+    </a>
+</h2>

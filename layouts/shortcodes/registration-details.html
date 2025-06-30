@@ -1,0 +1,28 @@
+{{- $info := site.Data.info }}
+
+<table>
+  <tr>
+    <td><strong>Registration Start:</strong></td>
+    <td>{{ $info.registrationStartDate | markdownify}}</td>
+  </tr>
+  <tr>
+    <td><strong>Registration End:</strong></td>
+    <td><mark>{{ $info.registrationCloseDate | markdownify}}</mark></td>
+  </tr>
+  <tr>
+    <td><strong>Event Date:</strong></td>
+    <td>{{ $info.eventDate | markdownify}}</td>
+  </tr>
+  <tr>
+    <td><strong>Event Timings:</strong></td>
+    <td>{{ $info.eventTimings | markdownify}}</td>
+  </tr>
+  <tr>
+    <td><strong>Event Venue:</strong></td>
+    <td>{{ $info.venue | markdownify}}</td>
+  </tr>
+  <tr>
+    <td><strong>Entry Fee:</strong></td>
+    <td>{{ $info.entryFee | markdownify}}</td>
+  </tr>
+</table>
